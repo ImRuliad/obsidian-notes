@@ -1,0 +1,37 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:Programming/Javascript  ",
+      "color": {
+        "a": 1,
+        "rgb": 4308475
+      }
+    },
+    {
+      "query": "path:\"Computer Architecture & Organization\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 4765736
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.54711100260417,
+  "lineSizeMultiplier": 2.00409342447917,
+  "collapse-forces": false,
+  "centerStrength": 0.451822916666667,
+  "repelStrength": 9.4970703125,
+  "linkStrength": 1,
+  "linkDistance": 183,
+  "scale": 0.7368455008294266,
+  "close": true
+}
