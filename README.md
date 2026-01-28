@@ -1,0 +1,2 @@
+# About
+*My obsidian notes, originally uploaded to github with the intentions of syncing my notes cross platform between Windows and Mac. I write notes on anything that I think is important or will be useful in the near or far future. It has helped me immensely and hopefully it will help you as well :). These notes are free for use and I don't profit whatsoever from this. The only thing I ask is that if something is incorrect in my notes please correct me :).*
