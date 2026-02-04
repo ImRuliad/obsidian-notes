@@ -108,4 +108,14 @@ Yield = \frac{1}{(1 + (DefectsPerArea \times DieArea / 2))^2}
 $$
 
 ---
-# <u> CPU Performance and Its Factors </u>
+# <u> Going Faster: Matrix Multiply in Python </u>
+
+Imagine this block of code:
+```python
+for i in xrange(n):
+	for j in xrange(n):
+		for k in xrange(n):
+			C[i][j] += A[i][k] * B[k][j]
+```
+Assuming a system with two Intel Skylake Xeon chips, each chip having 24 processors and running python 3.1
+- Code above will take about 5 minutes if the matrices are 960 x 960
