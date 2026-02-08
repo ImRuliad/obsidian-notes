@@ -2,4 +2,3 @@
 - each cell array will be comprised of 64 rows and 64 columns of bit cells = 4096 bit cells per bank.
 - each memory bank will contain a 64 x 64 cell array.
 - there will be 4 banks totaling 4 x 4096 = 16,384 bit cells = 16Kb memory.
-- 
