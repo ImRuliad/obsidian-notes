@@ -41,15 +41,12 @@
             "id": "4b909d7b743cf469",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Computer Architecture & Organization/CSC 142/Ch 2. Instructions, Language of the Computer.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "Computer Architecture & Organization/CSC 142/Images/Screenshot 2026-02-12 at 11.52.59 PM.png"
               },
-              "icon": "lucide-file",
-              "title": "Ch 2. Instructions, Language of the Computer"
+              "icon": "lucide-image",
+              "title": "Screenshot 2026-02-12 at 11.52.59 PM"
             }
           }
         ],
@@ -193,13 +190,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4b909d7b743cf469",
+  "active": "c3482dbf3d3b23f0",
   "lastOpenFiles": [
+    "Computer Architecture & Organization/CSC 142/Ch 2. Instructions, Language of the Computer.md",
+    "Computer Architecture & Organization/CSC 142/Images/Screenshot 2026-02-12 at 11.52.59 PM.png",
+    "Computer Architecture & Organization/CSC 142/Images/Screenshot 2026-02-12 at 11.48.58 PM.png",
     "Projects/SRAM/Notes.md",
     "Projects/SRAM/cell_array.sv.md",
-    "Computer Architecture & Organization/CSC 142/Ch 2. Instructions, Language of the Computer.md",
     "Computer Architecture & Organization/CSC 142/Ch 1. Computer Abstractions & Technology.md",
-    "Screenshot 2026-02-07 at 7.12.30 PM.png",
+    "Computer Architecture & Organization/CSC 142/Images/Screenshot 2026-02-07 at 7.12.30 PM.png",
     "Programming/Untitled",
     "Misc Reading/Performance Hints.md",
     "Computer Architecture & Organization/Chapter 10 Memory System.md",
@@ -230,7 +229,6 @@
     "Programming/C++/learncpp/Untitled",
     "Programming/C++",
     "control unit.md",
-    "Programming/Javascript/Fundamentals/Arrow Functions.md",
     "Programming/Javascript/Object Basics",
     "Leetcode/Images/Screenshot 2025-11-30 at 2.47.24 PM.png",
     "Computer Architecture & Organization/images/Screenshot 2025-11-25 at 6.32.06 PM.png",
@@ -239,8 +237,6 @@
     "Computer Architecture & Organization/images/Pasted image 20251125185533.png",
     "Computer Architecture & Organization/images/Pasted image 20251125185948.png",
     "Computer Architecture & Organization/images/Pasted image 20251125192839.png",
-    "Computer Architecture & Organization/images/Pasted image 20251125192757.png",
-    "Computer Architecture & Organization/images/Pasted image 20251125184121.png",
     "Untitled.canvas"
   ]
 }

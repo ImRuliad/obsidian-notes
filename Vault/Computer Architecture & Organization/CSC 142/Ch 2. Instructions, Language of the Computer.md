@@ -31,6 +31,7 @@ add t1, i, j
 sub f, t0, t1
 ```
 
+---
 # 2.3 Operands of the Computer Hardware
 *Operands are restricted to registers in the hardware. Registers are primitives.*
 
@@ -56,5 +57,53 @@ sub $s0, $t0, $t1    # f gets $t0 - $t1, which is (g + h) - (i + j)
 #### Memory Operands
 *Higher level programming languages can have data structures that far exceed the size that we can store in register. Arithmetic operations ONLY occur in these registers. We must be able to transfer data between main memory and registers. This is called a ***Load*** *operation*.
 
+Imagine we wanted to convert this C++ code into MIPS
+```cpp
+A[12] = h + A[8];
+```
 
+This is the MIPS equivalent
+```MIPS
+lw $t0, 32($s3)    #Temp reg $t0 gets A[8]
+add $t0, $s2, $t0  #Temp reg $t0 gets h + A[8]
+```
 
+> [!Danger] The reason we prepend ($s3) with 32 is because `load` and `stores` operate on `words`. Each `word` is 4 bytes or 32 bits. So if we want to get the 8th index from A we must use `4 x 8 = 32`
+
+---
+# 2.5 Representing Instructions in the Computer
+
+Mapping register names to numbers
+
+| Register Name | Register Number | Register Name | Register Number |
+| ------------- | --------------- | ------------- | --------------- |
+| $s0           | 16              | $t0           | 8               |
+| $s1           | 17              | $t1           | 9               |
+| $s2           | 18              | $t2           | 10              |
+| $s3           | 19              | $t3           | 11              |
+| $s4           | 20              | $t4           | 12              |
+| $s5           | 21              | $t5           | 13              |
+| $s6           | 22              | $t6           | 14              |
+| $s7           | 23              | $t7           | 15              |
+
+#### MIPS Fields
+
+***R-Format***
+![[Screenshot 2026-02-12 at 11.48.58 PM.png]]
+
+| Field   | Definition                     | Size   |
+| ------- | ------------------------------ | ------ |
+| `op`    | opcode                         | 6 bits |
+| `rs`    | first register source operand  | 5 bits |
+| `rt`    | second register source operand | 5 bits |
+| `rd`    | register destination operand   | 5 bits |
+| `shamt` | shift amount                   | 5 bits |
+| `funct` | function code                  | 6 bits |
+
+***I-Format***
+![[Screenshot 2026-02-12 at 11.52.59 PM.png]]
+Since the constant or address is `16 bits` in size this means
+- we can load any word within a region of 2 to the 15 power or 32,768 bytes.
+- 8192 Words
+- Of the address in the base register rs
+- Constants limited to no larger than 32,768
