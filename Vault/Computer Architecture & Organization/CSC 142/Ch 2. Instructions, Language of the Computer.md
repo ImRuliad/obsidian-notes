@@ -102,6 +102,14 @@ Mapping register names to numbers
 
 ***I-Format***
 ![[Screenshot 2026-02-12 at 11.52.59 PM.png]]
+
+| Field           | Definition                     | Size    |
+| --------------- | ------------------------------ | ------- |
+| `op`            | opcode                         | 6 bits  |
+| `rs`            | first register source operand  | 5 bits  |
+| `rt`            | Second register source operand | 5 bits  |
+| `const or addr` | Constant or Address            | 16 bits |
+
 Since the constant or address is `16 bits` in size this means
 - we can load any word within a region of 2 to the 15 power or 32,768 bytes.
 - 8192 Words

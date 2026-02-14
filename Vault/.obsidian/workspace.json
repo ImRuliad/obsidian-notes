@@ -41,12 +41,15 @@
             "id": "4b909d7b743cf469",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Computer Architecture & Organization/CSC 142/Images/Screenshot 2026-02-12 at 11.52.59 PM.png"
+                "file": "Computer Architecture & Organization/CSC 142/Ch 2. Instructions, Language of the Computer.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-image",
-              "title": "Screenshot 2026-02-12 at 11.52.59 PM"
+              "icon": "lucide-file",
+              "title": "Ch 2. Instructions, Language of the Computer"
             }
           }
         ],
@@ -190,10 +193,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c3482dbf3d3b23f0",
+  "active": "4b909d7b743cf469",
   "lastOpenFiles": [
-    "Computer Architecture & Organization/CSC 142/Ch 2. Instructions, Language of the Computer.md",
     "Computer Architecture & Organization/CSC 142/Images/Screenshot 2026-02-12 at 11.52.59 PM.png",
+    "Computer Architecture & Organization/CSC 142/Ch 2. Instructions, Language of the Computer.md",
     "Computer Architecture & Organization/CSC 142/Images/Screenshot 2026-02-12 at 11.48.58 PM.png",
     "Projects/SRAM/Notes.md",
     "Projects/SRAM/cell_array.sv.md",
