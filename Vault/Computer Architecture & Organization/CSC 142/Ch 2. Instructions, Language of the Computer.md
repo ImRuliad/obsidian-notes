@@ -113,5 +113,70 @@ Mapping register names to numbers
 Since the constant or address is `16 bits` in size this means
 - we can load any word within a region of 2 to the 15 power or 32,768 bytes.
 - 8192 Words
-- Of the address in the base register rs
+- Of the address in the base register `rs`
 - Constants limited to no larger than 32,768
+
+---
+# 2.6 Logical Operations
+
+| Logical Operation | MIPS Instruction | Description                                                                                            |
+| ----------------- | ---------------- | ------------------------------------------------------------------------------------------------------ |
+| Shift left        | `sll`            | Moves all bits in a word to left                                                                       |
+| Shift right       | `srl`            | Moves all bits in a word to right                                                                      |
+| bit-by-bit AND    | `and` `andi`     | Compares each bit in a word and calculates a `1` only if a `1` is in both operands                     |
+| bit-by-bit OR     | `or` `ori`       | Compares each bit in a word and calculates a `1` if a `1` is in either operand                         |
+| bit-by-bit NOT    | `nor`            | Calculates the NOT of the OR with two operands. Calculates a `1` only if there is `0` in both operands |
+#### `sll` example
+```mips
+sll $t2, $s0, 4
+```
+This shifts the bits in register `$s0` by 4 places and stores it in `$t2`.
+
+> [!DANGER] Shifting left by `i` bits is the same as multiplying by `2^i`.
+
+#### `and` example
+Assume `$t2` contains `0000 0000 0000 0000 0000 1101 1100 0000`
+Assume `$t1` contains `0000 0000 0000 0000 0011 1100 0000 0000`
+```mips
+and $t0, $t1, $t2
+```
+This ANDs the bits in `$t1` and `$t2` and stores it in `$t0`
+The result would be `0000 0000 0000 0000 0000 1100 0000 0000`
+#### `or` example
+Assume `$t1` contains `0000 0000 0000 0000 0011 1100 0000 0000`
+Assume `$t3` contains `0000 0000 0000 0000 0000 0000 0000 0000`
+```mips
+nor $t0, $t1, $t3
+```
+NORs the bits in `$t3` and `$t1` and stores it in `$t0`
+The result would be `1111 1111 1111 1111 1100 0011 1111 1111`
+
+#### Branch If Equal
+```mips
+beq register1, register2, L1
+```
+This branches to the statement labeled `L1` if the value in `register1` equals the value in `register2`.
+#### Branch If Not Equal
+```mips
+bne register1, register2, L1
+```
+This branches to the statement labeled `L1` if the value in `register1` does NOT equal the value in `register2`
+
+#### Example using BNE and BEQ
+*Assume this C code*
+```C
+if (i==j) {
+	f = g + h;
+} else {
+	f = g - h
+}
+```
+
+MIPS Equivalent
+```mips
+bne $s3, $s4, Else
+add $s0, $s1, $s2
+Else: sub $s0, $s1, $s2
+j Exit
+Exit:
+```
